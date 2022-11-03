@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v2/accounts/123/balance"
+  },
+  "response": {
+    "status": 200,
+    "delayDistribution": {
+      "type": "lognormal",
+      "median": 1000,
+      "sigma": 0.4
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-cache"
+    },
+    "bodyFileName": "balance.json"
+  }
+}

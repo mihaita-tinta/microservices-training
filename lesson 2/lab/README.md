@@ -1,6 +1,6 @@
 # Microservices collaboration
 We have our simple Rest API exposing invoices from `lab 1`
-![Hexagonal Architecture Diagram](../../lesson 1/lab/diagram1.png)
+![Hexagonal Architecture Diagram](../../lesson%201/lab/diagram1.png)
 
 In this lab, we need to connect to a PSD2 service to get user accounts and transactions.
 Based on the transaction name we need to detect paid invoices.

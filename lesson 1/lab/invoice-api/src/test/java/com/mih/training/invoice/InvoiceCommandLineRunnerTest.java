@@ -13,7 +13,7 @@ import java.io.File;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 
-@SpringBootTest(classes = InvoiceCommandLineRunner.class, args = "--target/test-classes/xml")
+@SpringBootTest(classes = InvoiceCommandLineRunner.class, args = "target/test-classes/xml")
 class InvoiceCommandLineRunnerTest {
 
     @MockBean

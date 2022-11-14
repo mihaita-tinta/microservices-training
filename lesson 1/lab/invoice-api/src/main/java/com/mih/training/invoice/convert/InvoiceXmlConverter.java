@@ -1,7 +1,6 @@
 package com.mih.training.invoice.convert;
 
 import com.mih.training.invoice.model.InvoiceXml;
-import com.mih.training.invoice.repository.Invoice;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -33,10 +32,10 @@ public class InvoiceXmlConverter implements Converter<File, InvoiceXml> {
     public InvoiceXml convert(File source) {
         // FIXME deserialize Invoice and validate
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Invoice.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(InvoiceXml.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-            Invoice invoice = null;
+            InvoiceXml invoice = null;
 
             SchemaFactory factory =
                     SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);

@@ -15,7 +15,7 @@ class InvoiceRepositoryTest {
     @Test
     public void test() {
         Invoice invoice = new Invoice();
-        // FIXME call repo
+        repository.saveAndFlush(invoice);
         assertNotNull(invoice.getId());
     }
 }

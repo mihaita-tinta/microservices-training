@@ -344,7 +344,7 @@ definitions:
 Enable Spring Cloud
 ```xml
 ...
-<spring-cloud.version>2021.0.4</spring-cloud.version>
+<spring-cloud.version>2022.0.0-RC2</spring-cloud.version>
 ...
 `    <dependencyManagement>
         <dependencies>

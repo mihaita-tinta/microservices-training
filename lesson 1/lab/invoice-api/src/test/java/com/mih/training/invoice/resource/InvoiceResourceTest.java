@@ -71,4 +71,22 @@ class InvoiceResourceTest {
                 .andDo(MockMvcResultHandlers.print());
     }
 
+
+    @Test
+    @WithMockUser
+    public void testInvoiceCanBePayed() throws Exception {
+
+        Invoice invoice = new Invoice();
+        invoice.setId(123L);
+        when(repository.findAll()).thenReturn(asList(invoice));
+
+        this.mockMvc.perform(
+                        MockMvcRequestBuilders.get("/api/invoices/123/payments/verify"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.canBePayed").value("true"))
+                .andExpect(jsonPath("$.account").isNotEmpty())
+                .andDo(MockMvcResultHandlers.print());
+    }
+
 }

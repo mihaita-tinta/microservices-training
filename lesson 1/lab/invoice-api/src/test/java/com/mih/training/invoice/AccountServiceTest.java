@@ -14,8 +14,7 @@ import java.util.concurrent.ExecutionException;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT,
-properties = "jwt.secret={bcrypt}$veryveryveryverysecret01")
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @AutoConfigureMockMvc
 @AutoConfigureWireMock(port = 0)
 class AccountServiceTest {
